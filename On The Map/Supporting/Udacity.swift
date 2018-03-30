@@ -132,6 +132,7 @@ class Udacity {
                 /* GUARD: Did we get a successful 2XX response? */
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
                     print("Your request returned a status code other than 2xx!")
+                    print(String(data: data!, encoding: .utf8)!)
                     return
                 }
                 
